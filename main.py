@@ -18,4 +18,8 @@ def generate(item: Item):
         'task': "image_captioning",
     }
     output = version.predict(**inputs)
+    if output.startswith("Caption:"):
+        output = output[8:]
+        output = output.strip()
+
     return output
