@@ -13,7 +13,7 @@ def read_root(request: Request):
     image =  request.query_params.get("image");
 
     if image is None:
-        return {"error": "imageUrl is required"}
+        return {"error": "image is required"}
 
     inputs = {
         # Input image
